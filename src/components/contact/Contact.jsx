@@ -72,7 +72,7 @@ const Contact = ({
                   className={classes.contactFormInput}
                   label="Voornaam*"
                   type="name"
-                  name="name"
+                  name="firstName"
                   value={firstName}
                   onChange={onChange}
                   error={errors.firstName}
@@ -149,7 +149,7 @@ const Contact = ({
             <br /><br />
             <TextField
               className={classes.contactFormInput}
-              label="Omschrijving*"
+              label="Omschrijving"
               type="subject"
               name="subject"
               value={subject}

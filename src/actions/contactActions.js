@@ -11,9 +11,10 @@ export const clearErrors = () => ({
 });
 
 export const emailContact = (formData, history) => dispatch => {
+  dispatch(clearErrors());
   axios
-    // .post('/api/contact/', formData)
-    .post('', formData)
+    // .post('http://localhost:3001/api/contact/', formData)
+    .post('https://ansa-techniek-backend.herokuapp.com/api/contact/', formData)
     .then(res => history.push('/'))
     .catch(err => dispatch({
       type: GET_ERRORS,

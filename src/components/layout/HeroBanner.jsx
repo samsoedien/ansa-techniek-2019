@@ -68,7 +68,7 @@ class HeroBanner extends Component {
         <div className={classes.heroBannerImage} style={{ backgroundImage: `url(${Background})` }}>
           <div className={classes.heroBannerOverlay}>
             <Typography variant="h2" className={classes.heroBannerHeader}>Welkom bij Ansa-Techniek</Typography>
-            <Typography variant="p" className={classes.heroBannerSubheader}>Wij zijn momenteel druk bezig met het opbouwen van de website. Neem contact op voor een op maat gemaakte offerte. </Typography>
+            <Typography variant="body1" className={classes.heroBannerSubheader}>Wij zijn momenteel druk bezig met het opbouwen van de website. Neem contact op voor een op maat gemaakte offerte. </Typography>
           </div>
         </div>
       </div>
