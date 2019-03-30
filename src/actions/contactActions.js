@@ -13,7 +13,7 @@ export const clearErrors = () => ({
 export const emailContact = (formData, history) => dispatch => {
   axios
     // .post('/api/contact/', formData)
-    .post('https://design-portfolio-backend.herokuapp.com/api/contact/', formData)
+    .post('', formData)
     .then(res => history.push('/'))
     .catch(err => dispatch({
       type: GET_ERRORS,

@@ -6,20 +6,20 @@ import store from './store/store';
 import theme from './theme/theme';
 // import logo from './logo.svg';
 import './App.css';
+
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 import ContactContainer from './containers/ContactContainer';
 
 const App = () => (
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
       <div className="app">
-        {/* <Header />
+        <Header />
         <main className="app-main">
-          <About />
-          <Projects />
-          <Photography /> */}
           <ContactContainer />
-        {/* </main>
-        <Footer /> */}
+        </main>
+        <Footer />
         </div> 
     </MuiThemeProvider>
   </Provider>

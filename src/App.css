@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +30,27 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+.app-main {
+  position: relative;
+  z-index: 100;
+  margin-bottom: 320px; /* need to be equal to footer height */ /* not sure if negative */
+  background-color: white;
 }

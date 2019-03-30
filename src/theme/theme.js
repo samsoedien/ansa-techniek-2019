@@ -23,6 +23,9 @@ const theme = createMuiTheme({
     // caption: {},
     // button: {},
     // h1: {},
+    h2: {
+      fontFamily: '"Nunito", sans-serif', 
+    },
     h3: {
       fontFamily: '"Open sans", sans-serif',
       fontSize: '2.8rem',
@@ -61,18 +64,15 @@ const theme = createMuiTheme({
     body2: {
       fontfamily: '"Open Sans", sans-serif',
       fontWeight: 400,
-      fontSize: '12px',
-      textAlign: 'justify',
+      fontSize: '14px',
       lineHeight: '1.8em',
-      color: '#407272',
     },
     caption: {
       fontfamily: '"Open Sans", sans-serif',
       fontWeight: 400,
-      fontSize: '10px',
-      textAlign: 'center',
+      fontSize: '11px',
       textTransform: 'uppercase',
-      lineHeight: '1.2em',
+      lineHeight: '1.8em',
       color: '#fff',
     }
   },
