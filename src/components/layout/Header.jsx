@@ -16,6 +16,7 @@ const styles = theme => ({
     zIndex: 200,
     boxShadow: '0px 8px 20px -10px rgba(0,0,0,0.8)',
   },
+
 });
 
 const Header = ({ classes }) => (

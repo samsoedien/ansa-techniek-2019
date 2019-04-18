@@ -28,6 +28,9 @@ const styles = theme => ({
     marginBottom: '24px',
     width: '100%',
   },
+  contactHeader: {
+    marginTop: '24px',
+  }
 });
 
 const Contact = ({
@@ -63,9 +66,18 @@ const Contact = ({
   return (
     <section className="contact" id="contact">
       <Grid container justify="center">
+        <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
+            <article className="about__article">
+              <Typography variant="h3" className={classes.contactHeader}>Contact</Typography>
+              <Typography variant="body1" paragraph>Bij een aanvraag van een offerte of het een kleine of grote opdracht gaat, vraag ik aan de opdrachtgevers de juist informatie wat hij of zij precies wil en zoekt het goed uit zodat we niet achteraf verrast worden, in de meeste gevallen maken we een afspraken om het werk opnemen en te bespreken, tevens zal ik de klant ook adviseren wat het best is. Alle offerte is vrijblijvend en heeft een geldigheid van 30 dagen.</Typography>
+              <Typography variant="body1" paragraph>Heeft u een klus of storing kunt u dit formulier invullen. Ook voor vragen kunt u met het formulier contact met ons opnemen.</Typography>
+            </article>
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center">
         <Grid item xs={11} sm={9} md={7} lg={5}>
           <form onSubmit={onSubmit} className={classes.contactForm} noValidate autoComplete="off">
-            <Typography variant="body1" paragraph>Heeft u een klus of storing kunt u deze formulier invullen. Ook voor vragen kunt u met het formulier contact met ons opnemen.</Typography>
             <Grid container justify="space-between">
               <Grid item xs={5}>
                 <TextField
@@ -182,6 +194,14 @@ const Contact = ({
             </FormGroup>
             <Button variant="contained" color="primary" type="submit" value="Submit" className={classes.contactFormButton}>Verzenden</Button>
           </form>
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center">
+        <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
+            <article className="about__article">
+              <Typography variant="body1" paragraph>Alle uitgevoerde werkzaamheden wordt 1 jaar garantie gegeven op montage en materiaal. Als de klant zelf de materalen levert wordt alleen garantie gegeven op de montage.</Typography>
+            </article>
         </Grid>
       </Grid>
     </section>

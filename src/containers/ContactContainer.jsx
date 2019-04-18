@@ -65,9 +65,21 @@ class ContactContainer extends Component {
       message,
       offerte,
     };
-
     const { emailContact, history } = this.props;
     emailContact(formData, history);
+    
+    // this.setState({
+    //   firstName: '',
+    //   lastName: '',
+    //   address: '',
+    //   postalCode: '',
+    //   city: '',
+    //   email: '',
+    //   phone: '',
+    //   subject: '',
+    //   message: '',
+    //   offerte: '',
+    // });
   }
 
   render() {
