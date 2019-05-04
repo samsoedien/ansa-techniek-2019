@@ -7,6 +7,9 @@ const theme = createMuiTheme({
     primary: {
       main: teal[500],
     },
+    secondary: {
+      main: '#fff',
+    }
   },
   typography: {
     useNextVariants: true,
@@ -33,7 +36,7 @@ const theme = createMuiTheme({
       textAlign: 'left',
       textTransform: 'uppercase',
       color: 'rgba(0, 181, 204, 1)',
-      marginBottom: '12px',
+      marginBottom: '18px',
 
     },
     h4: {
@@ -43,7 +46,7 @@ const theme = createMuiTheme({
       textAlign: 'left',
       textTransform: 'capitalize',
       color: 'rgba(0, 181, 204, 1)',
-      marginBottom: '12px',
+      marginBottom: '18px',
     },
     h6: {
       fontFamily: '"Open sans", sans-serif',

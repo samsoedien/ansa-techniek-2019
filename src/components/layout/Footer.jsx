@@ -36,10 +36,6 @@ const Footer = ({ classes }) => {
 
       <Grid container justify="space-evenly">
         <Grid item xs={12} sm={3}>
-          <Typography variant="caption" className={classes.bold} paragraph>Contactgegevens</Typography>
-          <Typography variant="caption">André Samsoedien</Typography>
-          <Typography variant="caption">Telefoon: +31 (0)6 37 36 28 17 </Typography>
-          <Typography variant="caption" paragraph>Email: info@ansa-techniek.nl </Typography>
         </Grid>
       </Grid>
       <div className={classes.footerCopyright}>

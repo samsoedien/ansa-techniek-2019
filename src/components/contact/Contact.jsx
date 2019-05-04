@@ -69,8 +69,8 @@ const Contact = ({
         <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
             <article className="about__article">
               <Typography variant="h3" className={classes.contactHeader}>Contact</Typography>
-              <Typography variant="body1" paragraph>Bij een aanvraag van een offerte of het een kleine of grote opdracht gaat, vraag ik aan de opdrachtgevers de juist informatie wat hij of zij precies wil en zoekt het goed uit zodat we niet achteraf verrast worden, in de meeste gevallen maken we een afspraken om het werk opnemen en te bespreken, tevens zal ik de klant ook adviseren wat het best is. Alle offerte is vrijblijvend en heeft een geldigheid van 30 dagen.</Typography>
-              <Typography variant="body1" paragraph>Heeft u een klus of storing kunt u dit formulier invullen. Ook voor vragen kunt u met het formulier contact met ons opnemen.</Typography>
+              <Typography variant="body1" paragraph>Bij een aanvraag van een offerte wordt er eerst de juiste informatie verzamelt over hoe opdracht uitgevoert moet worden. Dit is om aan de wensen van u zo goed mogelijk te voldoen, u duidelijk te adviseren en elkaar niet achteraf te verassen met onvoorziende extra kosten. In de meeste gevallen maken we een afspraak om het werk op te nemen en te bespreken. We nodigen u uit om contact op te nemen voor een vrijblijvende offerte met een geldigheid van 30 dagen.</Typography>
+              <Typography variant="body1" paragraph>Heeft u een klus of storing kunt u het onderstaande contact formulier invullen. Ook voor vragen kunt u met het formulier contact met ons opnemen.</Typography>
             </article>
         </Grid>
       </Grid>
@@ -200,7 +200,7 @@ const Contact = ({
       <Grid container justify="center">
         <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
             <article className="about__article">
-              <Typography variant="body1" paragraph>Alle uitgevoerde werkzaamheden wordt 1 jaar garantie gegeven op montage en materiaal. Als de klant zelf de materalen levert wordt alleen garantie gegeven op de montage.</Typography>
+              <Typography variant="body1" paragraph>Alle uitgevoerde werkzaamheden worden met 1 jaar garantie gelevert op montage en materiaal. Indien de klant zelf de materalen beschik wordt alleen garantie gegeven op de montage.</Typography>
             </article>
         </Grid>
       </Grid>

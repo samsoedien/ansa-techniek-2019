@@ -40,7 +40,7 @@ const styles = theme => ({
     width: '100%',
     height: '100vh',
     backgroundColor: 'rgba(0, 255, 255, 0.6)',
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .20))',
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .30), rgba(0, 0, 0, 0), rgba(0, 0, 0, .20))',
   },
   heroBannerHeader: {
     position: 'absolute',

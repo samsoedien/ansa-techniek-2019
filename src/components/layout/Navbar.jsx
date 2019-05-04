@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
+import { Button } from '@material-ui/core';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 import './Navbar.css';
+
 
 import ScrollWrapper from '../../wrappers/ScrollWrapper';
 
@@ -29,6 +31,7 @@ const Navbar = ({ classes }) => {
               <li className="header-nav-list-item"><AnchorLink offset="42" className="header-nav-link" href="#home">Home</AnchorLink></li>
               <li className="header-nav-list-item"><AnchorLink offset="42" className="header-nav-link" href="#about">Over Ons</AnchorLink></li>
               <li className="header-nav-list-item"><AnchorLink offset="42" className="header-nav-link" href="#contact">Offerte Aanvraag</AnchorLink></li>
+              <Button href="tel:0637362817" variant="outlined" color="secondary" size="large" className="header-nav-button">Telefoon: +31 (0)6 37 36 28 17</Button>
             </Scrollspy>
           </ul>
         </div>
