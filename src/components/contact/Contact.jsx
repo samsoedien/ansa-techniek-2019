@@ -23,6 +23,7 @@ const styles = theme => ({
   contactFormButton: {
     marginBottom: '12px',
     float: 'right',
+    color: '#fff',
   },
   contactFormInputTextarea: {
     marginBottom: '24px',

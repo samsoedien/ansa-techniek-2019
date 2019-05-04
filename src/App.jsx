@@ -10,6 +10,7 @@ import './App.css';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import About from './components/about/About';
+import Reviews from './components/reviews/Reviews';
 import ContactContainer from './containers/ContactContainer';
 import Navbar from './components/layout/Navbar';
 
@@ -21,6 +22,7 @@ const App = () => (
           <Header />
           <main className="app-main">
             <About />
+            <Reviews />
             <ContactContainer />
           </main>
           <Footer />
