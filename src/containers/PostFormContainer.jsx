@@ -10,9 +10,6 @@ class PostFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      company: '',
-      rating: '',
       comment: '',
       errors: {},
     };
@@ -20,7 +17,6 @@ class PostFormContainer extends Component {
     this.onSubmitCallback = this.onSubmitCallback.bind(this);
   }
 
-  
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
@@ -38,17 +34,9 @@ class PostFormContainer extends Component {
   }
 
   onSubmitCallback() {
-    const {
-      name,
-      company,
-      rating,
-      comment,
-    } = this.state;
+    const { name, company, rating, comment } = this.state;
 
     const formData = {
-      name,
-      company,
-      rating,
       comment,
     };
     const { addPost, history } = this.props;
@@ -56,19 +44,10 @@ class PostFormContainer extends Component {
   }
 
   render() {
-    const {
-      name,
-      company,
-      rating,
-      comment,
-      errors,
-    } = this.state;
+    const { name, company, rating, comment, errors } = this.state;
     return (
       <div className="blog-form-container">
-        <BlogForm
-          name={name}
-          company={company}
-          rating={rating}
+        <PostForm
           comment={comment}
           errors={errors}
           onChangeCallback={this.onChangeCallback}
@@ -87,11 +66,14 @@ PostFormContainer.propTypes = {
     rating: PropTypes.number,
     comment: PropTypes.string,
   }).isRequired,
-  history: PropTypes.object.isRequired, // eslint-disable-line 
+  history: PropTypes.object.isRequired, // eslint-disable-line
 };
 
 const mapStateToProps = state => ({
   errors: state.errors,
 });
 
-export default connect(mapStateToProps, { addPost })(withRouter(PostFormContainer));
+export default connect(
+  mapStateToProps,
+  { addPost },
+)(withRouter(PostFormContainer));

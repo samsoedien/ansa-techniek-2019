@@ -12,6 +12,7 @@ import Footer from './components/layout/Footer';
 import About from './components/about/About';
 import Reviews from './components/reviews/Reviews';
 import ContactContainer from './containers/ContactContainer';
+import PostFormContainer from './containers/PostFormContainer';
 import Navbar from './components/layout/Navbar';
 
 const App = () => (
@@ -23,10 +24,11 @@ const App = () => (
           <main className="app-main">
             <About />
             <Reviews />
+            <PostFormContainer />
             <ContactContainer />
           </main>
           <Footer />
-        </div> 
+        </div>
       </Router>
     </MuiThemeProvider>
   </Provider>

@@ -11,14 +11,11 @@ import {
   Button,
 } from '@material-ui/core';
 
-import isEmpty from '../../utils/is-empty';
-
 const styles = theme => ({
   postFormCard: {
     margin: '24px 0',
   },
-  postFormInput: {
-  },
+  postFormInput: {},
   postFormButton: {
     float: 'right',
     margin: '6px 0 12px 12px',
@@ -27,23 +24,18 @@ const styles = theme => ({
 
 const PostForm = ({
   comment,
-  onChangeHandle,
-  onSubmitHandle,
-  onCancelHandle,
+  onChangeCallback,
+  onSubmitCallback,
   errors,
   classes,
 }) => {
   const onChange = e => {
-    onChangeHandle(e);
+    onChangeCallback(e);
   };
 
   const onSubmit = e => {
     e.preventDefault();
-    onSubmitHandle();
-  };
-
-  const onCancel = () => {
-    onCancelHandle();
+    onSubmitCallback();
   };
 
   return (
@@ -51,7 +43,11 @@ const PostForm = ({
       <Grid container justify="center">
         <Grid item xs={8}>
           <Card className={classes.postFormCard}>
-            <CardHeader className={classes.postFormCardheader} color="primary" title="Comment" />
+            <CardHeader
+              className={classes.postFormCardheader}
+              color="primary"
+              title="Comment"
+            />
             <CardContent>
               <form onSubmit={onSubmit} noValidate>
                 <TextField
@@ -75,12 +71,10 @@ const PostForm = ({
                   value="Submit"
                   variant="contained"
                   color="primary"
-                  disabled={isEmpty(comment) ? 'disabled' : null}
                   className={classes.postFormButton}
                 >
                   {'Post Comment'}
                 </Button>
-                <Button onClick={onCancel} variant="outlined" className={classes.postFormButton}>Cancel</Button>
               </form>
             </CardContent>
           </Card>
