@@ -10,9 +10,9 @@ import './App.css';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import About from './components/about/About';
-import Reviews from './components/reviews/Reviews';
+import ReviewContainer from './containers/ReviewContainer';
 import ContactContainer from './containers/ContactContainer';
-import PostFormContainer from './containers/PostFormContainer';
+import ReviewFormContainer from './containers/ReviewFormContainer';
 import Navbar from './components/layout/Navbar';
 
 const App = () => (
@@ -23,8 +23,8 @@ const App = () => (
           <Header />
           <main className="app-main">
             <About />
-            <Reviews />
-            <PostFormContainer />
+            <ReviewContainer />
+            <ReviewFormContainer />
             <ContactContainer />
           </main>
           <Footer />

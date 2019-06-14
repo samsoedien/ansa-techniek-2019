@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { addPost } from '../actions/postActions';
+import { addPost } from '../../actions/postActions';
 
-import PostForm from '../components/posts/PostForm';
+import PostForm from '../../components/posts/PostForm';
 
 class PostFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
+      company: '',
       comment: '',
-      errors: {},
+      approved: false,
+      error: {},
     };
     this.onChangeCallback = this.onChangeCallback.bind(this);
     this.onSubmitCallback = this.onSubmitCallback.bind(this);

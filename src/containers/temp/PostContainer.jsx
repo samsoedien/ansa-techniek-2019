@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { firestoreConnect } from 'react-redux-firebase';
 import {
   addPost,
   getPosts,
   getPost,
   deletePost,
-} from '../actions/postActions';
+} from '../../actions/postActions';
 
-import Reviews from '../components/reviews/Reviews';
+import Reviews from '../../components/reviews/Reviews';
 
 class PostContainer extends Components {
   constructor(props) {
@@ -30,17 +32,15 @@ class PostContainer extends Components {
   }
 
   render() {
-    const { posts: { post, loading }, auth } = this.props;
     const {
-      comment,
-      errors,
-    } = this.state;
+      post: { posts, loading },
+    } = this.props;
+    const { comment, errors } = this.state;
     return (
       <div className="post-container">
         <Reviews
-          comment={comment}
-          errors={errors}
-          onChangeCallback={this.onChangeCallback}
+          posts={posts}
+          loading={loading}
         />
       </div>
     );
@@ -49,15 +49,25 @@ class PostContainer extends Components {
 
 PostContainer.propTypes = {
   getPosts: PropTypes.func.isRequired,
-  comment: PropTypes.String,isRequired,
-}
+  comment: PropTypes.String,
+  isRequired,
+};
 
 const mapStateToProps = state => ({
-  posts: state.posts,
-  errors: state.errors,
+  post: state.firestore.ordered.reviews,
 });
 
-export default connect(mapStateToProps, {
-  getPosts,
-  addPost,
-})(PostContainer);
+export default connect(
+  mapStateToProps,
+  {
+    getPosts,
+    addPost,
+  },
+)(PostContainer);
+
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'reviews' }
+  ])
+)(PostContainer)

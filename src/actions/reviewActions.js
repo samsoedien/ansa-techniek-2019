@@ -19,19 +19,21 @@ export const clearErrors = () => ({
 });
 
 // Add Post
-export const addPost = postData => async (
+export const addReview = reviewData => async (
   dispatch,
+  getState,
   { getFirebase, getFirestore },
 ) => {
   dispatch(clearErrors());
   try {
     const firestore = getFirestore();
-    await firestore.collection('posts').add({
-      ...postData,
+    const res = await firestore.collection('reviews').add({
+      ...reviewData,
+      date: new Date(),
     });
     dispatch({
       type: ADD_POST,
-      payload: console.log('success'),
+      payload: res,
     });
   } catch (err) {
     dispatch({

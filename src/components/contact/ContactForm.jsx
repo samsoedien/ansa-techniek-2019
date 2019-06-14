@@ -31,7 +31,7 @@ const styles = theme => ({
   },
   contactHeader: {
     marginTop: '24px',
-  }
+  },
 });
 
 const Contact = ({
@@ -62,23 +62,43 @@ const Contact = ({
 
   const onHandleCheckbox = name => e => {
     onHandleCheckboxCallback(name, e);
-  }
+  };
 
   return (
     <section className="contact" id="contact">
       <Grid container justify="center">
         <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
-            <article className="about__article">
-              <Typography variant="h3" className={classes.contactHeader}>Contact</Typography>
-              <Typography variant="body1" paragraph>Bij een aanvraag van een offerte wordt er eerst de juiste informatie verzamelt over hoe opdracht uitgevoert moet worden. Dit is om aan de wensen van u zo goed mogelijk te voldoen, u duidelijk te adviseren en elkaar niet achteraf te verassen met onvoorziende extra kosten. In de meeste gevallen maken we een afspraak om het werk op te nemen en te bespreken. We nodigen u uit om contact op te nemen voor een vrijblijvende offerte met een geldigheid van 30 dagen.</Typography>
-              <Typography variant="body1" paragraph>Heeft u een klus of storing kunt u het onderstaande contact formulier invullen. Ook voor vragen kunt u met het formulier contact met ons opnemen.</Typography>
-            </article>
+          <article className="about__article">
+            <Typography variant="h3" className={classes.contactHeader}>
+              Contact
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Bij een aanvraag van een offerte wordt er eerst de juiste
+              informatie verzamelt over hoe opdracht uitgevoert moet worden. Dit
+              is om aan de wensen van u zo goed mogelijk te voldoen, u duidelijk
+              te adviseren en elkaar niet achteraf te verassen met onvoorziende
+              extra kosten. In de meeste gevallen maken we een afspraak om het
+              werk op te nemen en te bespreken. We nodigen u uit om contact op
+              te nemen voor een vrijblijvende offerte met een geldigheid van 30
+              dagen.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Heeft u een klus of storing kunt u het onderstaande contact
+              formulier invullen. Ook voor vragen kunt u met het formulier
+              contact met ons opnemen.
+            </Typography>
+          </article>
         </Grid>
       </Grid>
 
       <Grid container justify="center">
         <Grid item xs={11} sm={9} md={7} lg={5}>
-          <form onSubmit={onSubmit} className={classes.contactForm} noValidate autoComplete="off">
+          <form
+            onSubmit={onSubmit}
+            className={classes.contactForm}
+            noValidate
+            autoComplete="off"
+          >
             <Grid container justify="space-between">
               <Grid item xs={5}>
                 <TextField
@@ -159,7 +179,8 @@ const Contact = ({
               error={errors.phone}
               helperText={errors ? errors.phone : ''}
             />
-            <br /><br />
+            <br />
+            <br />
             <TextField
               className={classes.contactFormInput}
               label="Omschrijving"
@@ -183,26 +204,38 @@ const Contact = ({
             />
             <FormGroup row>
               <FormControlLabel
-              control={
-                <Checkbox
-                  checked={offerte}
-                  onChange={onHandleCheckbox('offerte')}
-                  color="primary"
-                />
+                control={
+                  <Checkbox
+                    checked={offerte}
+                    onChange={onHandleCheckbox('offerte')}
+                    color="primary"
+                  />
                 }
                 label="Offerte gewenst"
               />
             </FormGroup>
-            <Button variant="contained" color="primary" type="submit" value="Submit" className={classes.contactFormButton}>Verzenden</Button>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              value="Submit"
+              className={classes.contactFormButton}
+            >
+              Verzenden
+            </Button>
           </form>
         </Grid>
       </Grid>
 
       <Grid container justify="center">
         <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
-            <article className="about__article">
-              <Typography variant="body1" paragraph>Alle uitgevoerde werkzaamheden worden met 1 jaar garantie gelevert op montage en materiaal. Indien de klant zelf de materalen beschik wordt alleen garantie gegeven op de montage.</Typography>
-            </article>
+          <article className="about__article">
+            <Typography variant="body1" paragraph>
+              Alle uitgevoerde werkzaamheden worden met 1 jaar garantie gelevert
+              op montage en materiaal. Indien de klant zelf de materalen beschik
+              wordt alleen garantie gegeven op de montage.
+            </Typography>
+          </article>
         </Grid>
       </Grid>
     </section>

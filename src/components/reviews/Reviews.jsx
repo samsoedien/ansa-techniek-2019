@@ -6,17 +6,16 @@ const styles = theme => ({
   root: {
     height: '320px',
     backgroundColor: '#dadfe1',
-  }
+  },
 });
 
-const Reviews = ({ classes }) => {
- 
+const Reviews = ({ classes, reviews, loading }) => {
   return (
     <section className={classes.root}>
-
+      <h1>hi</h1>
     </section>
   );
-}
+};
 
 Reviews.propTypes = {
   classes: PropTypes.object.isRequired, // eslint-disable-line

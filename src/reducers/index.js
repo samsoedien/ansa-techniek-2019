@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
-// import contactReducer from './contactReducer';
+import { firestoreReducer } from 'redux-firestore';
+
 import errorReducer from './errorReducer';
 import postReducer from './postReducer';
+// import contactReducer from './contactReducer';
 
 export default combineReducers({
-//   contact: contactReducer,
+  fireStore: firestoreReducer,
   errors: errorReducer,
   post: postReducer,
+  // contact: contactReducer,
 });

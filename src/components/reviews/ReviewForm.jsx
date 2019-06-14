@@ -12,21 +12,23 @@ import {
 } from '@material-ui/core';
 
 const styles = theme => ({
-  postFormCard: {
+  reviewFormCard: {
     margin: '24px 0',
   },
-  postFormInput: {},
-  postFormButton: {
+  reviewFormInput: {},
+  reviewFormButton: {
     float: 'right',
     margin: '6px 0 12px 12px',
   },
 });
 
-const PostForm = ({
+const ReviewForm = ({
+  name,
+  company,
   comment,
   onChangeCallback,
   onSubmitCallback,
-  errors,
+  // errors,
   classes,
 }) => {
   const onChange = e => {
@@ -34,17 +36,16 @@ const PostForm = ({
   };
 
   const onSubmit = e => {
-    e.preventDefault();
-    onSubmitCallback();
+    onSubmitCallback(e);
   };
 
   return (
-    <div className="post-form">
+    <div className="review-form">
       <Grid container justify="center">
         <Grid item xs={8}>
-          <Card className={classes.postFormCard}>
+          <Card className={classes.reviewFormCard}>
             <CardHeader
-              className={classes.postFormCardheader}
+              className={classes.reviewFormCardheader}
               color="primary"
               title="Comment"
             />
@@ -52,7 +53,35 @@ const PostForm = ({
               <form onSubmit={onSubmit} noValidate>
                 <TextField
                   id="outlined-multiline-static"
-                  className={classes.postFormInput}
+                  className={classes.reviewFormInput}
+                  label="Name"
+                  fullWidth
+                  defaultValue="Name"
+                  margin="normal"
+                  variant="outlined"
+                  name="name"
+                  value={name}
+                  onChange={onChange}
+                  // error={errors.comment}
+                  // helperText={errors ? errors.comment : ''}
+                />
+                <TextField
+                  id="outlined-multiline-static"
+                  className={classes.reviewFormInput}
+                  label="Company"
+                  fullWidth
+                  defaultValue="Company"
+                  margin="normal"
+                  variant="outlined"
+                  name="company"
+                  value={company}
+                  onChange={onChange}
+                  // error={errors.comment}
+                  // helperText={errors ? errors.comment : ''}
+                />
+                <TextField
+                  id="outlined-multiline-static"
+                  className={classes.reviewFormInput}
                   label="Write a Comment"
                   multiline
                   rows="4"
@@ -63,15 +92,15 @@ const PostForm = ({
                   name="comment"
                   value={comment}
                   onChange={onChange}
-                  error={errors.comment}
-                  helperText={errors ? errors.comment : ''}
+                  // error={errors.comment}
+                  // helperText={errors ? errors.comment : ''}
                 />
                 <Button
                   type="submit"
                   value="Submit"
                   variant="contained"
                   color="primary"
-                  className={classes.postFormButton}
+                  className={classes.reviewFormButton}
                 >
                   {'Post Comment'}
                 </Button>
@@ -84,7 +113,7 @@ const PostForm = ({
   );
 };
 
-PostForm.propTypes = {
+ReviewForm.propTypes = {
   comment: PropTypes.string.isRequired,
   onChangeHandle: PropTypes.func.isRequired,
   onSubmitHandle: PropTypes.func.isRequired,
@@ -95,4 +124,4 @@ PostForm.propTypes = {
   classes: PropTypes.object.isRequired, // eslint-disable-line
 };
 
-export default withStyles(styles)(PostForm);
+export default withStyles(styles)(ReviewForm);

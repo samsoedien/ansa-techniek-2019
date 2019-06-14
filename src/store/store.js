@@ -20,10 +20,11 @@ const middleware = [
 const store = createStore(
   rootReducer,
   initialState,
-  composeWithDevTools(applyMiddleware(...middleware)),
+  compose(
+    applyMiddleware(...middleware),
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig),
+  ),
 );
-
-// reduxFirestore(fbConfig),
-// reactReduxFirebase(fbConfig),
 
 export default store;
