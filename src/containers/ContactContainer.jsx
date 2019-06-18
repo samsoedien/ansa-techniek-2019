@@ -17,6 +17,7 @@ const ContactContainer = ({ emailContact }) => {
     subject: '',
     message: '',
     offerte: false,
+    selectedFile: null,
     errors: {},
   });
 
@@ -36,6 +37,8 @@ const ContactContainer = ({ emailContact }) => {
 
   const onChangeCallback = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onFileCallback = e => setFormData({ selectedFile: e.target.files[0] });
 
   const onSubmitCallback = e => {
     e.preventDefault();
@@ -62,6 +65,7 @@ const ContactContainer = ({ emailContact }) => {
       offerte={offerte}
       errors={errors}
       onChangeCallback={onChangeCallback}
+      onFileCallback={onFileCallback}
       onSubmitCallback={onSubmitCallback}
       onHandleCheckboxCallback={onHandleCheckboxCallback}
     />
