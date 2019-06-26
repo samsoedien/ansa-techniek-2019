@@ -52,14 +52,9 @@ const Contact = ({
   onHandleCheckboxCallback,
   classes,
 }) => {
-  const onChange = e => {
-    onChangeCallback(e);
-  };
+  const onChange = e => onChangeCallback(e);
 
-  const onSubmit = e => {
-    e.preventDefault();
-    onSubmitCallback();
-  };
+  const onSubmit = e => onSubmitCallback(e);
 
   const onFileHandler = e => onFileCallback(e);
 
@@ -205,7 +200,6 @@ const Contact = ({
               error={errors.message}
               helperText={errors ? errors.message : ''}
             />
-            <input type="file" onChange={onFileHandler} />
             <FormGroup row>
               <FormControlLabel
                 control={

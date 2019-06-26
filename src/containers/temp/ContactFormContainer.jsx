@@ -5,7 +5,7 @@ import { emailContact } from '../../actions/contactActions';
 
 import ContactForm from '../../components/contact/ContactForm';
 
-class ContactContainer extends Component {
+class ContactFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,6 +30,12 @@ class ContactContainer extends Component {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
+    const fstName = nextProps.errors.map(error =>
+      error.filter(error => {
+        return error.params === 'firstname';
+      }),
+    );
+    console.log('firstname: ', fstName);
   }
 
   onChangeCallback(e) {
@@ -40,7 +46,8 @@ class ContactContainer extends Component {
     this.setState({ [name]: e.target.checked });
   };
 
-  onSubmitCallback() {
+  onSubmitCallback(e) {
+    e.preventDefault();
     const {
       firstName,
       lastName,
@@ -53,7 +60,7 @@ class ContactContainer extends Component {
       message,
       offerte,
     } = this.state;
-    const formData = {
+    const contactData = {
       firstName,
       lastName,
       address,
@@ -65,8 +72,8 @@ class ContactContainer extends Component {
       message,
       offerte,
     };
-    const { emailContact, history } = this.props;
-    emailContact(formData, history);
+    const { emailContact } = this.props;
+    emailContact(contactData);
 
     // this.setState({
     //   firstName: '',
@@ -119,7 +126,7 @@ class ContactContainer extends Component {
   }
 }
 
-ContactContainer.propTypes = {
+ContactFormContainer.propTypes = {
   emailContact: PropTypes.func.isRequired,
   errors: PropTypes.shape({
     firstName: PropTypes.string,
@@ -137,10 +144,9 @@ ContactContainer.propTypes = {
 
 const mapStateToProps = state => ({
   errors: state.errors,
-  confirmation: state.confirmation,
 });
 
 export default connect(
   mapStateToProps,
   { emailContact },
-)(ContactContainer);
+)(ContactFormContainer);

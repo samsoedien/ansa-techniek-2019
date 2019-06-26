@@ -11,7 +11,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import About from './components/about/About';
 import ReviewContainer from './containers/ReviewContainer';
-import ContactContainer from './containers/ContactContainer';
+import ContactFormContainer from './containers/temp/ContactFormContainer';
 import ReviewFormContainer from './containers/ReviewFormContainer';
 import Navbar from './components/layout/Navbar';
 
@@ -23,9 +23,9 @@ const App = () => (
           <Header />
           <main className="app-main">
             <About />
-            <ReviewContainer />
-            <ReviewFormContainer />
-            <ContactContainer />
+            {/* <ReviewContainer /> */}
+            {/* <ReviewFormContainer /> */}
+            <ContactFormContainer />
           </main>
           <Footer />
         </div>

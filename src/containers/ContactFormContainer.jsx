@@ -5,7 +5,11 @@ import { emailContact } from '../actions/contactActions';
 
 import ContactForm from '../components/contact/ContactForm';
 
-const ContactContainer = ({ emailContact }) => {
+const ContactFormContainer = ({ emailContact, errors }) => {
+  useEffect(() => {
+    console.log(errors);
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -18,7 +22,6 @@ const ContactContainer = ({ emailContact }) => {
     message: '',
     offerte: false,
     selectedFile: null,
-    errors: {},
   });
 
   const {
@@ -32,7 +35,6 @@ const ContactContainer = ({ emailContact }) => {
     subject,
     message,
     offerte,
-    errors,
   } = formData;
 
   const onChangeCallback = e =>
@@ -72,7 +74,7 @@ const ContactContainer = ({ emailContact }) => {
   );
 };
 
-ContactContainer.propTypes = {
+ContactFormContainer.propTypes = {
   emailContact: PropTypes.func.isRequired,
   errors: PropTypes.shape({}).isRequired,
 };
@@ -84,6 +86,6 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { emailContact },
-)(ContactContainer);
+)(ContactFormContainer);
 
 // Need to handle validation errors
