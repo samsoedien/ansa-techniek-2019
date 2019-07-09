@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { emailContact } from '../../actions/contactActions';
 
 import ContactForm from '../../components/contact/ContactForm';
+import Alert from '../../components/layout/Alert';
 
 class ContactFormContainer extends Component {
   constructor(props) {
@@ -30,12 +31,6 @@ class ContactFormContainer extends Component {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
-    const fstName = nextProps.errors.map(error =>
-      error.filter(error => {
-        return error.params === 'firstname';
-      }),
-    );
-    console.log('firstname: ', fstName);
   }
 
   onChangeCallback(e) {
@@ -104,7 +99,7 @@ class ContactFormContainer extends Component {
       errors,
     } = this.state;
     return (
-      <div className="contact-container">
+      <Fragment>
         <ContactForm
           firstName={firstName}
           lastName={lastName}
@@ -121,7 +116,8 @@ class ContactFormContainer extends Component {
           onSubmitCallback={this.onSubmitCallback}
           onHandleCheckboxCallback={this.onHandleCheckboxCallback}
         />
-      </div>
+        <Alert />
+      </Fragment>
     );
   }
 }

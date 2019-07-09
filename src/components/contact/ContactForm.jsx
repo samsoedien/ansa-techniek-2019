@@ -10,7 +10,6 @@ import {
   FormControlLabel,
   Checkbox,
 } from '@material-ui/core';
-import { Fade } from 'react-reveal';
 
 const styles = theme => ({
   contactForm: {
@@ -73,17 +72,17 @@ const Contact = ({
             <Typography variant="body1" paragraph>
               Bij een aanvraag van een offerte wordt er eerst de juiste
               informatie verzamelt over hoe opdracht uitgevoert moet worden. Dit
-              is om aan de wensen van u zo goed mogelijk te voldoen, u duidelijk
-              te adviseren en elkaar niet achteraf te verassen met onvoorziende
-              extra kosten. In de meeste gevallen maken we een afspraak om het
-              werk op te nemen en te bespreken. We nodigen u uit om contact op
-              te nemen voor een vrijblijvende offerte met een geldigheid van 30
-              dagen.
+              wordt gedaan om zo goed mogelijk aan uw wensen te voldoen, u
+              duidelijk te adviseren en elkaar niet achteraf te verassen met
+              onvoorziende extra kosten. In de meeste gevallen maken we een
+              afspraak om het werk op te nemen en te bespreken. We nodigen u uit
+              om contact op te nemen voor een vrijblijvende offerte met een
+              geldigheid van 30 dagen.
             </Typography>
             <Typography variant="body1" paragraph>
               Heeft u een klus of storing kunt u het onderstaande contact
-              formulier invullen. Ook voor vragen kunt u met het formulier
-              contact met ons opnemen.
+              formulier invullen. Ook voor vragen kunt u hiermee contact met ons
+              opnemen.
             </Typography>
           </article>
         </Grid>
@@ -131,8 +130,6 @@ const Contact = ({
                   name="address"
                   value={address}
                   onChange={onChange}
-                  error={errors.address}
-                  helperText={errors ? errors.address : ''}
                 />
               </Grid>
               <Grid item xs={2}>
@@ -142,8 +139,6 @@ const Contact = ({
                   name="postalCode"
                   value={postalCode}
                   onChange={onChange}
-                  error={errors.postalCode}
-                  helperText={errors ? errors.postalCode : ''}
                 />
               </Grid>
               <Grid item xs={3}>
@@ -153,8 +148,6 @@ const Contact = ({
                   name="city"
                   value={city}
                   onChange={onChange}
-                  error={errors.city}
-                  helperText={errors ? errors.city : ''}
                 />
               </Grid>
             </Grid>
@@ -229,9 +222,9 @@ const Contact = ({
         <Grid item xs={11} sm={10} md={8} lg={6} xl={6}>
           <article className="about__article">
             <Typography variant="body1" paragraph>
-              Alle uitgevoerde werkzaamheden worden met 1 jaar garantie gelevert
-              op montage en materiaal. Indien de klant zelf de materalen beschik
-              wordt alleen garantie gegeven op de montage.
+              Alle uitgevoerde werkzaamheden worden met 1 jaar garantie geleverd
+              op montage en materiaal. Indien de klant zelf over de materalen
+              beschik, wordt er alleen garantie gegeven op de montage.
             </Typography>
           </article>
         </Grid>
