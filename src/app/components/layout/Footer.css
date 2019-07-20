@@ -1,0 +1,32 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 260px;
+  width: 100%;
+  z-index: 0;
+  padding: 40px 0;
+  background-color: #2e3131;
+  text-align: center;
+}
+
+.footer__copyright {
+  background-color: #161818;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: white;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+
+.footer__logo {
+  vertical-align: middle;
+  padding: 0 12px;
+}
+
+.footer__logo--yesss {
+}

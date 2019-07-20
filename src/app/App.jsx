@@ -2,8 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { MuiThemeProvider } from '@material-ui/core';
-import store from './store/store';
-import theme from './theme/theme';
+import store from '../store/store';
+import theme from '../theme/theme';
 // import logo from './logo.svg';
 import './App.css';
 
@@ -24,7 +24,7 @@ const App = () => (
           <main className="app-main">
             <About />
             {/* <ReviewContainer /> */}
-            {/* <ReviewFormContainer /> */}
+            <ReviewFormContainer />
             <ContactFormContainer />
           </main>
           <Footer />
