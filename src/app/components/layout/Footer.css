@@ -7,6 +7,17 @@
   padding: 40px 0;
   background-color: #2e3131;
   text-align: center;
+  color: white;
+}
+
+.footer h6 {
+  text-transform: uppercase;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.paragraph {
+  line-height: 1.6rem;
 }
 
 .footer__copyright {
@@ -25,8 +36,13 @@
 
 .footer__logo {
   vertical-align: middle;
-  padding: 0 12px;
+  padding: 0 24px;
 }
 
-.footer__logo--yesss {
+@media only screen and (max-width: 600px) {
+  .footer__logo,
+  .logo--link {
+    transform: scale(0.7);
+    padding: 0;
+  }
 }

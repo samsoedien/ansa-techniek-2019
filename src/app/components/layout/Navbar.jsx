@@ -7,11 +7,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 import './Navbar.css';
 
-
 import ScrollWrapper from '../../wrappers/ScrollWrapper';
 
-const styles = {
-}
+const styles = {};
 
 const Navbar = ({ classes }) => {
   const handleScroll = scrollDistance => {
@@ -24,21 +22,55 @@ const Navbar = ({ classes }) => {
   };
   return (
     <ScrollWrapper onWindowScroll={handleScroll}>
-      <nav className="header-nav hero-banner__image--bg-elem hero-banner__image--clip" id="myNav">
+      <nav
+        className="header-nav hero-banner__image--bg-elem hero-banner__image--clip"
+        id="myNav"
+      >
         <div className="header-nav--container">
+          <h1 className="site-logo">Ansa-Techniek</h1>
           <ul className="header-nav-list">
-            <Scrollspy items={['home', 'about', 'contact']} currentClassName="is-current">
-              <li className="header-nav-list-item"><AnchorLink offset="42" className="header-nav-link" href="#home">Home</AnchorLink></li>
-              <li className="header-nav-list-item"><AnchorLink offset="42" className="header-nav-link" href="#about">Over Ons</AnchorLink></li>
-              <li className="header-nav-list-item"><AnchorLink offset="42" className="header-nav-link" href="#contact">Offerte Aanvraag</AnchorLink></li>
-              <button className="nav-button"><a href="tel:0637362817"></a>Telefoon: +31 (0)6 37 36 28 17</button>
+            <Scrollspy
+              items={['home', 'about', 'contact']}
+              currentClassName="is-current"
+            >
+              <li className="header-nav-list-item">
+                <AnchorLink
+                  offset="42"
+                  className="header-nav-link"
+                  href="#home"
+                >
+                  Home
+                </AnchorLink>
+              </li>
+              <li className="header-nav-list-item">
+                <AnchorLink
+                  offset="42"
+                  className="header-nav-link"
+                  href="#about"
+                >
+                  Over Ons
+                </AnchorLink>
+              </li>
+              <li className="header-nav-list-item">
+                <AnchorLink
+                  offset="42"
+                  className="header-nav-link"
+                  href="#contact"
+                >
+                  Contact
+                </AnchorLink>
+              </li>
+              <button className="nav-button">
+                <a href="tel:0637362817" />
+                Telefoon: +31 (0)6 37 36 28 17
+              </button>
             </Scrollspy>
           </ul>
         </div>
       </nav>
     </ScrollWrapper>
   );
-}
+};
 
 Navbar.propTypes = {
   classes: PropTypes.object.isRequired, // eslint-disable-line

@@ -71,10 +71,10 @@ const Contact = ({
             </Typography>
             <Typography variant="body1" paragraph>
               Bij een aanvraag van een offerte wordt er eerst de juiste
-              informatie verzamelt over hoe opdracht uitgevoert moet worden. Dit
-              wordt gedaan om zo goed mogelijk aan uw wensen te voldoen, u
+              informatie verzamelt over hoe een opdracht uitgevoerd moet worden.
+              Dit wordt gedaan om zo goed mogelijk aan uw wensen te voldoen, u
               duidelijk te adviseren en elkaar niet achteraf te verassen met
-              onvoorziende extra kosten. In de meeste gevallen maken we een
+              onvoorziende extra kosten. In de meeste gevallen maken wij een
               afspraak om het werk op te nemen en te bespreken. We nodigen u uit
               om contact op te nemen voor een vrijblijvende offerte met een
               geldigheid van 30 dagen.

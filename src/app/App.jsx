@@ -24,7 +24,7 @@ const App = () => (
           <main className="app-main">
             <About />
             {/* <ReviewContainer /> */}
-            <ReviewFormContainer />
+            {/* <ReviewFormContainer /> */}
             <ContactFormContainer />
           </main>
           <Footer />
