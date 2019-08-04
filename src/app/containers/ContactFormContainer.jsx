@@ -20,6 +20,7 @@ const ContactFormContainer = ({ emailContact, errors }) => {
     phone: '',
     subject: '',
     message: '',
+    date: new Date(),
     offerte: false,
     selectedFile: null,
   });
@@ -34,6 +35,7 @@ const ContactFormContainer = ({ emailContact, errors }) => {
     phone,
     subject,
     message,
+    date,
     offerte,
   } = formData;
 
@@ -64,6 +66,7 @@ const ContactFormContainer = ({ emailContact, errors }) => {
       phone={phone}
       subject={subject}
       message={message}
+      date={date}
       offerte={offerte}
       errors={errors}
       onChangeCallback={onChangeCallback}

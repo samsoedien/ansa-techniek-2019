@@ -44,6 +44,8 @@ const Contact = ({
   subject,
   message,
   offerte,
+  preferredDate,
+  date,
   errors,
   onChangeCallback,
   onSubmitCallback,
@@ -204,7 +206,30 @@ const Contact = ({
                 }
                 label="Offerte gewenst"
               />
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={preferredDate}
+                    onChange={onHandleCheckbox('preferredDate')}
+                    color="primary"
+                  />
+                }
+                label="Voorkeur datum uitvoering gewenst"
+              />
             </FormGroup>
+            <TextField
+              className={classes.contactFormInputTextarea}
+              id="date"
+              label="Voorkeur datum uitvoering"
+              type="date"
+              name="date"
+              value={date}
+              onChange={onChange}
+              InputLabelProps={{
+                shrink: true,
+              }}
+              disabled={preferredDate ? '' : 'disabled'}
+            />
             <Button
               variant="contained"
               color="primary"
@@ -244,6 +269,8 @@ Contact.propTypes = {
   subject: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   offerte: PropTypes.bool.isRequired,
+  preferredDate: PropTypes.bool.isRequired,
+  date: PropTypes.string.isRequired,
   errors: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,

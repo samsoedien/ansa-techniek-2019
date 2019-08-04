@@ -63,3 +63,9 @@
   font-size: 14px;
   line-height: 2em;
 }
+
+@media only screen and (max-width: 720px) {
+  .hero-banner__heading {
+    font-size: 2.4rem;
+  }
+}

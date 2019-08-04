@@ -12,7 +12,7 @@
 
 .footer h6 {
   text-transform: uppercase;
-  margin-top: 18px;
+  margin-top: 12px;
   margin-bottom: 6px;
 }
 
@@ -39,7 +39,12 @@
   padding: 0 24px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  .footer p {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+
   .footer__logo,
   .logo--link {
     transform: scale(0.7);

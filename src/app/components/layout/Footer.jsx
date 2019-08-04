@@ -7,6 +7,7 @@ import './Footer.css';
 import YESSS_LOGO from '../../assets/img/yesss-electrical-logo-rgb.png';
 import ZOOFY_LOGO from '../../assets/img/zoofy-logo.png';
 import BOUWLUST_LOGO from '../../assets/img/bouwlust-logo.png';
+import PRACHT_LOGO from '../../assets/img/pracht-installatietechniek-logo.jpg';
 
 const Footer = () => {
   return (
@@ -52,6 +53,18 @@ const Footer = () => {
               height="44px"
               alt="bouwlust_logo"
               className="footer__logo footer__logo--bouwlust"
+            />
+          </a>
+          <a
+            href="https://www.prachtbv.nl/"
+            target="_blank"
+            className="logo--link"
+          >
+            <img
+              src={PRACHT_LOGO}
+              height="44px"
+              alt="pracht_logo"
+              className="footer__logo footer__logo--pracht"
             />
           </a>
         </Grid>

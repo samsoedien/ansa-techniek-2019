@@ -19,6 +19,8 @@ class ContactFormContainer extends Component {
       phone: '',
       subject: '',
       message: '',
+      date: '',
+      preferredDate: false,
       offerte: false,
       errors: {},
     };
@@ -53,6 +55,8 @@ class ContactFormContainer extends Component {
       phone,
       subject,
       message,
+      preferredDate,
+      date,
       offerte,
     } = this.state;
     const contactData = {
@@ -65,6 +69,8 @@ class ContactFormContainer extends Component {
       phone,
       subject,
       message,
+      preferredDate,
+      date,
       offerte,
     };
     const { emailContact } = this.props;
@@ -96,6 +102,8 @@ class ContactFormContainer extends Component {
       subject,
       message,
       offerte,
+      preferredDate,
+      date,
       errors,
     } = this.state;
     return (
@@ -111,6 +119,8 @@ class ContactFormContainer extends Component {
           subject={subject}
           message={message}
           offerte={offerte}
+          preferredDate={preferredDate}
+          date={date}
           errors={errors}
           onChangeCallback={this.onChangeCallback}
           onSubmitCallback={this.onSubmitCallback}

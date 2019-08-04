@@ -167,10 +167,14 @@ nav ul li:hover > a,
     margin-top: 20px;
   }
   .site-logo {
-    margin-top: 26.5px;
+    font-size: 1.2rem;
+    margin-top: 29px;
+  }
+  .nav-button {
+    font-size: 11px;
   }
   .header-nav--shrink .site-logo {
-    margin-top: 13px;
+    margin-top: 15px;
   }
   .header-nav--shrink .nav-button {
     margin-top: 6px;
